@@ -21,7 +21,7 @@ builder.Services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<Es
 builder.Services.AddDbContext<EstateFlowDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("EstateFlowDbConnection")));
 
-builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+builder.Services.AddValidatorsFromAssemblyContaining<EstateFlow.Application.Contracts.Properties.CreatePropertyRequestValidator>();
 
 builder.Services.AddScoped<IMeterReadingService, MeterReadingService>();
 
