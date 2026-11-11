@@ -1,4 +1,4 @@
-﻿namespace EstateFlow.Server.Domain
+namespace EstateFlow.Domain
 {
     public class Rental
     {
@@ -14,3 +14,4 @@
         public Tenant? Tenant { get; set; }
     }
 }
+

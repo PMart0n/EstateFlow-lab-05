@@ -1,4 +1,4 @@
-﻿namespace EstateFlow.Server.Domain
+namespace EstateFlow.Domain
 {
     public class Property
     {
@@ -16,3 +16,4 @@
         public ICollection<Meter> Meters { get; set; } = new List<Meter>();
     }
 }
+

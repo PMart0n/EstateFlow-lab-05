@@ -1,4 +1,4 @@
-﻿namespace EstateFlow.Server.Domain
+namespace EstateFlow.Domain
 {
     public class Provider
     {
@@ -10,3 +10,4 @@
         public UtilityType? UtilityType { get; set; }
     }
 }
+

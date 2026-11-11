@@ -1,4 +1,4 @@
-﻿namespace EstateFlow.Server.Domain
+namespace EstateFlow.Domain
 {
     public class MeterReading
     {
@@ -13,3 +13,4 @@
         public Meter? Meter { get; set; }
     }
 }
+

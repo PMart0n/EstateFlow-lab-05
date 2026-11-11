@@ -1,4 +1,4 @@
-﻿using EstateFlow.Server.Data;
+using EstateFlow.Server.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EstateFlow.Server.Controllers
@@ -67,3 +67,4 @@ namespace EstateFlow.Server.Controllers
         }
     }
 }
+

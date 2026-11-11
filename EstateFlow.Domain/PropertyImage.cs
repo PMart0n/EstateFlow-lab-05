@@ -1,4 +1,4 @@
-﻿namespace EstateFlow.Server.Domain
+namespace EstateFlow.Domain
 {
     public class PropertyImage
     {
@@ -11,3 +11,4 @@
         public Property? Property { get; set; }
     }
 }
+

@@ -1,4 +1,4 @@
-Ôªøusing EstateFlow.Server.Domain;
+using EstateFlow.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace EstateFlow.Server.Data
@@ -94,7 +94,7 @@ namespace EstateFlow.Server.Data
                 new City { Id = 1, Name = "Budapest" },
                 new City { Id = 2, Name = "Debrecen" },
                 new City { Id = 3, Name = "Szeged" },
-                new City { Id = 4, Name = "Kecskem√©t" }
+                new City { Id = 4, Name = "KecskemÈt" }
             );
 
             modelBuilder.Entity<Property>().HasData(
@@ -102,18 +102,18 @@ namespace EstateFlow.Server.Data
                 {
                     Id = new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"),
                     Code = "BPSZK",
-                    Name = "Szondi utcai lak√°s",
+                    Name = "Szondi utcai lak·s",
                     Address = "1068 Budapest, Szondi utca 45.",
                     SquareMeters = 54,
-                    AdvertisementText = "Vil√°gos, fel√∫j√≠tott m√°sf√©l szob√°s lak√°s a VI. ker√ºlet sz√≠v√©ben, a Nyugati p√°lyaudvart√≥l 10 percre.",
+                    AdvertisementText = "Vil·gos, fel˙jÌtott m·sfÈl szob·s lak·s a VI. ker¸let szÌvÈben, a Nyugati p·lyaudvartÛl 10 percre.",
                     CityId = 1
                 },
                 new Property
                 {
                     Id = new Guid("7c9e6679-7425-40de-944b-e07fc1f90ae7"),
                     Code = "BPFKR",
-                    Name = "Ferenc k√∂r√∫ti lak√°s",
-                    Address = "1092 Budapest, Ferenc k√∂r√∫t 12.",
+                    Name = "Ferenc kˆr˙ti lak·s",
+                    Address = "1092 Budapest, Ferenc kˆr˙t 12.",
                     SquareMeters = 68,
                     AdvertisementText = null,
                     CityId = 1
@@ -122,10 +122,10 @@ namespace EstateFlow.Server.Data
                 {
                     Id = new Guid("9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"),
                     Code = "DEEGY",
-                    Name = "Egyetem sug√°r√∫ti lak√°s",
-                    Address = "4026 Debrecen, Egyetem sug√°r√∫t 8.",
+                    Name = "Egyetem sug·r˙ti lak·s",
+                    Address = "4026 Debrecen, Egyetem sug·r˙t 8.",
                     SquareMeters = 47,
-                    AdvertisementText = "Hangulatos, erk√©lyes lak√°s a Nagyerd≈ë k√∂zel√©ben, egyetemist√°knak ide√°lis.",
+                    AdvertisementText = "Hangulatos, erkÈlyes lak·s a Nagyerdı kˆzelÈben, egyetemist·knak ide·lis.",
                     CityId = 2
                 }
             );
@@ -142,7 +142,7 @@ namespace EstateFlow.Server.Data
                 new PropertyImage
                 {
                     Id = new Guid("6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b"),
-                    Name = "H√°l√≥szoba",
+                    Name = "H·lÛszoba",
                     FilePath = "uploads/properties/bpszk-haloszoba.jpg",
                     UploadedAt = new DateTime(2026, 1, 15, 10, 32, 0, DateTimeKind.Utc),
                     PropertyId = new Guid("0f8fad5b-d9cb-469f-a165-70867728950e")
@@ -173,19 +173,19 @@ namespace EstateFlow.Server.Data
 
             modelBuilder.Entity<Provider>().HasData(
                 new Provider { Id = 1, Name = "MVM Next", Note = null, UtilityTypeId = 1 },
-                new Provider { Id = 2, Name = "F≈êG√ÅZ", Note = "a g√°z√≥r√°kat √©vente egyszer olvass√°k le", UtilityTypeId = 2 },
-                new Provider { Id = 3, Name = "F≈ëv√°rosi V√≠zm≈±vek", Note = null, UtilityTypeId = 3 },
-                new Provider { Id = 4, Name = "Debreceni V√≠zm≈±", Note = null, UtilityTypeId = 3 }
+                new Provider { Id = 2, Name = "F’G¡Z", Note = "a g·zÛr·kat Èvente egyszer olvass·k le", UtilityTypeId = 2 },
+                new Provider { Id = 3, Name = "Fıv·rosi VÌzm˚vek", Note = null, UtilityTypeId = 3 },
+                new Provider { Id = 4, Name = "Debreceni VÌzm˚", Note = null, UtilityTypeId = 3 }
             );
 
             modelBuilder.Entity<Meter>().HasData(
                 new Meter
                 {
                     Id = new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3301"),
-                    Name = "Villany√≥ra",
-                    Location = "el≈ëszobai szekr√©nyben",
+                    Name = "VillanyÛra",
+                    Location = "elıszobai szekrÈnyben",
                     SerialNumber = "EL-2019-448723",
-                    ReadingPeriod = "minden h√≥nap elej√©n",
+                    ReadingPeriod = "minden hÛnap elejÈn",
                     Note = null,
                     PropertyId = new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"),
                     UtilityTypeId = 1,
@@ -194,11 +194,11 @@ namespace EstateFlow.Server.Data
                 new Meter
                 {
                     Id = new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3302"),
-                    Name = "G√°z√≥ra",
-                    Location = "konyh√°ban a bej√°rati ajt√≥ mellett",
+                    Name = "G·zÛra",
+                    Location = "konyh·ban a bej·rati ajtÛ mellett",
                     SerialNumber = "GA-2017-902211",
                     ReadingPeriod = null,
-                    Note = "2027-ben hiteles√≠t√©s esed√©kes",
+                    Note = "2027-ben hitelesÌtÈs esedÈkes",
                     PropertyId = new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"),
                     UtilityTypeId = 2,
                     ProviderId = 2
@@ -206,10 +206,10 @@ namespace EstateFlow.Server.Data
                 new Meter
                 {
                     Id = new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3303"),
-                    Name = "V√≠z√≥ra",
-                    Location = "f√ºrd≈ëszob√°ban a k√°d alatt",
+                    Name = "VÌzÛra",
+                    Location = "f¸rdıszob·ban a k·d alatt",
                     SerialNumber = "VZ-2021-115847",
-                    ReadingPeriod = "minden p√°ros h√≥napban van leolvas√°s",
+                    ReadingPeriod = "minden p·ros hÛnapban van leolvas·s",
                     Note = null,
                     PropertyId = new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"),
                     UtilityTypeId = 3,
@@ -218,10 +218,10 @@ namespace EstateFlow.Server.Data
                 new Meter
                 {
                     Id = new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3304"),
-                    Name = "Villany√≥ra",
-                    Location = "folyos√≥n a bej√°rati ajt√≥ mellett",
+                    Name = "VillanyÛra",
+                    Location = "folyosÛn a bej·rati ajtÛ mellett",
                     SerialNumber = "EL-2020-771139",
-                    ReadingPeriod = "minden h√≥nap elej√©n",
+                    ReadingPeriod = "minden hÛnap elejÈn",
                     Note = null,
                     PropertyId = new Guid("7c9e6679-7425-40de-944b-e07fc1f90ae7"),
                     UtilityTypeId = 1,
@@ -230,8 +230,8 @@ namespace EstateFlow.Server.Data
                 new Meter
                 {
                     Id = new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3305"),
-                    Name = "V√≠z√≥ra",
-                    Location = "konyh√°ban a mosogat√≥ alatt",
+                    Name = "VÌzÛra",
+                    Location = "konyh·ban a mosogatÛ alatt",
                     SerialNumber = "VZ-2018-660254",
                     ReadingPeriod = null,
                     Note = null,
@@ -309,15 +309,15 @@ namespace EstateFlow.Server.Data
                 {
                     Id = new Guid("c56a4180-65aa-42ec-a945-5fd21dec0538"),
                     FirstName = "Anna",
-                    LastName = "Kov√°cs",
+                    LastName = "Kov·cs",
                     Email = "kovacs.anna@example.com",
                     PhoneNumber = "+36 20 123 4567"
                 },
                 new Tenant
                 {
                     Id = new Guid("f47ac10b-58cc-4372-a567-0e02b2c3d479"),
-                    FirstName = "P√©ter",
-                    LastName = "Szab√≥",
+                    FirstName = "PÈter",
+                    LastName = "SzabÛ",
                     Email = "szabo.peter@example.com",
                     PhoneNumber = null
                 }
@@ -351,7 +351,7 @@ namespace EstateFlow.Server.Data
                     PaidAt = new DateTime(2026, 3, 12, 14, 20, 0, DateTimeKind.Utc),
                     Amount = 28500m,
                     Type = "Repair",
-                    Name = "V√≠zvezet√©k-jav√≠t√°s a f√ºrd≈ëszob√°ban",
+                    Name = "VÌzvezetÈk-javÌt·s a f¸rdıszob·ban",
                     Note = null,
                     PropertyId = new Guid("0f8fad5b-d9cb-469f-a165-70867728950e")
                 },
@@ -361,8 +361,8 @@ namespace EstateFlow.Server.Data
                     PaidAt = new DateTime(2026, 4, 5, 9, 0, 0, DateTimeKind.Utc),
                     Amount = 18000m,
                     Type = "Maintenance",
-                    Name = "G√°zkaz√°n √©ves karbantart√°sa",
-                    Note = "k√∂telez≈ë √©ves fel√ºlvizsg√°lat",
+                    Name = "G·zkaz·n Èves karbantart·sa",
+                    Note = "kˆtelezı Èves fel¸lvizsg·lat",
                     PropertyId = new Guid("0f8fad5b-d9cb-469f-a165-70867728950e")
                 },
                 new Expense
@@ -371,7 +371,7 @@ namespace EstateFlow.Server.Data
                     PaidAt = new DateTime(2026, 4, 20, 11, 30, 0, DateTimeKind.Utc),
                     Amount = 45200m,
                     Type = "Tax",
-                    Name = "√âp√≠tm√©nyad√≥, I. f√©l√©v",
+                    Name = "…pÌtmÈnyadÛ, I. fÈlÈv",
                     Note = null,
                     PropertyId = new Guid("9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d")
                 },
@@ -381,7 +381,7 @@ namespace EstateFlow.Server.Data
                     PaidAt = new DateTime(2026, 5, 8, 16, 45, 0, DateTimeKind.Utc),
                     Amount = 12900m,
                     Type = "Maintenance",
-                    Name = "Z√°rcsere a bej√°rati ajt√≥n",
+                    Name = "Z·rcsere a bej·rati ajtÛn",
                     Note = null,
                     PropertyId = new Guid("7c9e6679-7425-40de-944b-e07fc1f90ae7")
                 }
@@ -420,7 +420,7 @@ namespace EstateFlow.Server.Data
                     UtilitiesAmount = 33800m,
                     PeriodYear = 2026,
                     PeriodMonth = 5,
-                    Note = "k√©t nap k√©s√©ssel √©rkezett",
+                    Note = "kÈt nap kÈsÈssel Èrkezett",
                     TenantId = new Guid("c56a4180-65aa-42ec-a945-5fd21dec0538"),
                     PropertyId = new Guid("0f8fad5b-d9cb-469f-a165-70867728950e")
                 },
@@ -464,3 +464,4 @@ namespace EstateFlow.Server.Data
         }
     }
 }
+

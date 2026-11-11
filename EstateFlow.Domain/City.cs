@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 
-namespace EstateFlow.Server.Domain
+namespace EstateFlow.Domain
 {
     public class City
     {
@@ -10,3 +10,4 @@ namespace EstateFlow.Server.Domain
         public ICollection<Property> Properties { get; set; } = new List<Property>();
     }
 }
+

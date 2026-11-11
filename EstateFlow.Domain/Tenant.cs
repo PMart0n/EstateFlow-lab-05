@@ -1,4 +1,4 @@
-﻿namespace EstateFlow.Server.Domain
+namespace EstateFlow.Domain
 {
     public class Tenant
     {
@@ -9,3 +9,4 @@
         public string? PhoneNumber { get; set; }
     }
 }
+

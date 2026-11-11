@@ -1,4 +1,4 @@
-﻿namespace EstateFlow.Server.Domain
+namespace EstateFlow.Domain
 {
     public class Invoice
     {
@@ -19,3 +19,4 @@
         public Provider? Provider { get; set; }
     }
 }
+

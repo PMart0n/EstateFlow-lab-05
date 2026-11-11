@@ -1,4 +1,4 @@
-﻿using EstateFlow.Server.Contracts.Meters;
+using EstateFlow.Server.Contracts.Meters;
 
 namespace EstateFlow.Server.Services
 {
@@ -7,3 +7,5 @@ namespace EstateFlow.Server.Services
         Task<MeterReadingSubmissionResult> SubmitReadingAsync(Guid meterId, SubmitMeterReadingRequest request);
     }
 }
+
+

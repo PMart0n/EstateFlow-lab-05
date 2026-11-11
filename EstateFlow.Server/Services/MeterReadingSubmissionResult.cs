@@ -1,4 +1,4 @@
-﻿using EstateFlow.Server.Domain;
+using EstateFlow.Domain;
 
 namespace EstateFlow.Server.Services
 {
@@ -15,3 +15,5 @@ namespace EstateFlow.Server.Services
         public static MeterReadingSubmissionResult Failure(string error) => new() { Error = error };
     }
 }
+
+

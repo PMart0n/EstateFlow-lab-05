@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 
-namespace EstateFlow.Server.Domain
+namespace EstateFlow.Domain
 {
     public class UtilityType
     {
@@ -11,3 +11,4 @@ namespace EstateFlow.Server.Domain
         public ICollection<Provider> Providers { get; set; } = new List<Provider>();
     }
 }
+
