@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace EstateFlow.Server.Migrations
+namespace EstateFlow.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration
@@ -79,7 +79,7 @@ namespace EstateFlow.Server.Migrations
                     { 1, "Budapest" },
                     { 2, "Debrecen" },
                     { 3, "Szeged" },
-                    { 4, "Kecskem√©t" }
+                    { 4, "KecskemÈt" }
                 });
 
             migrationBuilder.InsertData(
@@ -87,9 +87,9 @@ namespace EstateFlow.Server.Migrations
                 columns: new[] { "Id", "Address", "AdvertisementText", "CityId", "Code", "Name", "SquareMeters" },
                 values: new object[,]
                 {
-                    { new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), "1068 Budapest, Szondi utca 45.", "Vil√°gos, fel√∫j√≠tott m√°sf√©l szob√°s lak√°s a VI. ker√ºlet sz√≠v√©ben, a Nyugati p√°lyaudvart√≥l 10 percre.", 1, "BPSZK", "Szondi utcai lak√°s", 54 },
-                    { new Guid("7c9e6679-7425-40de-944b-e07fc1f90ae7"), "1092 Budapest, Ferenc k√∂r√∫t 12.", null, 1, "BPFKR", "Ferenc k√∂r√∫ti lak√°s", 68 },
-                    { new Guid("9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"), "4026 Debrecen, Egyetem sug√°r√∫t 8.", "Hangulatos, erk√©lyes lak√°s a Nagyerd≈ë k√∂zel√©ben, egyetemist√°knak ide√°lis.", 2, "DEEGY", "Egyetem sug√°r√∫ti lak√°s", 47 }
+                    { new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), "1068 Budapest, Szondi utca 45.", "Vil·gos, fel˙jÌtott m·sfÈl szob·s lak·s a VI. ker¸let szÌvÈben, a Nyugati p·lyaudvartÛl 10 percre.", 1, "BPSZK", "Szondi utcai lak·s", 54 },
+                    { new Guid("7c9e6679-7425-40de-944b-e07fc1f90ae7"), "1092 Budapest, Ferenc kˆr˙t 12.", null, 1, "BPFKR", "Ferenc kˆr˙ti lak·s", 68 },
+                    { new Guid("9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"), "4026 Debrecen, Egyetem sug·r˙t 8.", "Hangulatos, erkÈlyes lak·s a Nagyerdı kˆzelÈben, egyetemist·knak ide·lis.", 2, "DEEGY", "Egyetem sug·r˙ti lak·s", 47 }
                 });
 
             migrationBuilder.InsertData(
@@ -97,7 +97,7 @@ namespace EstateFlow.Server.Migrations
                 columns: new[] { "Id", "FilePath", "Name", "PropertyId", "UploadedAt" },
                 values: new object[,]
                 {
-                    { new Guid("6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b"), "uploads/properties/bpszk-haloszoba.jpg", "H√°l√≥szoba", new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), new DateTime(2026, 1, 15, 10, 32, 0, 0, DateTimeKind.Utc) },
+                    { new Guid("6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b"), "uploads/properties/bpszk-haloszoba.jpg", "H·lÛszoba", new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), new DateTime(2026, 1, 15, 10, 32, 0, 0, DateTimeKind.Utc) },
                     { new Guid("b0788d2f-8003-43c1-92a4-edc76a7c5dde"), "uploads/properties/bpszk-nappali.jpg", "Nappali", new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), new DateTime(2026, 1, 15, 10, 30, 0, 0, DateTimeKind.Utc) },
                     { new Guid("d2719b1e-1c3b-4e5f-9a6d-8b7c6d5e4f3a"), "uploads/properties/deegy-konyha.jpg", "Konyha", new Guid("9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"), new DateTime(2026, 2, 10, 9, 15, 0, 0, DateTimeKind.Utc) },
                     { new Guid("f9168c5e-ceb2-4faa-b6bf-329bf39fa1e4"), "uploads/properties/bpfkr-homlokzat.jpg", "Utcai homlokzat", new Guid("7c9e6679-7425-40de-944b-e07fc1f90ae7"), new DateTime(2026, 2, 3, 14, 0, 0, 0, DateTimeKind.Utc) }
@@ -134,3 +134,5 @@ namespace EstateFlow.Server.Migrations
         }
     }
 }
+
+

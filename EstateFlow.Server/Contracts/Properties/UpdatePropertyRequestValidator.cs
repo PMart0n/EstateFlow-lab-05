@@ -1,4 +1,4 @@
-﻿using EstateFlow.Server.Data;
+using EstateFlow.Infrastructure.Data;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,3 +27,4 @@ namespace EstateFlow.Server.Contracts.Properties
         }
     }
 }
+

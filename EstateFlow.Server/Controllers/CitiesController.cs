@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using EstateFlow.Server.Data;
+using EstateFlow.Infrastructure.Data;
 using EstateFlow.Domain;
 
 namespace EstateFlow.Server.Controllers
@@ -106,4 +106,5 @@ namespace EstateFlow.Server.Controllers
         }
     }
 }
+
 

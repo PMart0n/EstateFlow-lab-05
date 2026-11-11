@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace EstateFlow.Server.Migrations
+namespace EstateFlow.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class AddDomainEntities : Migration
@@ -145,8 +145,8 @@ namespace EstateFlow.Server.Migrations
                 columns: new[] { "Id", "Email", "FirstName", "LastName", "PhoneNumber" },
                 values: new object[,]
                 {
-                    { new Guid("c56a4180-65aa-42ec-a945-5fd21dec0538"), "kovacs.anna@example.com", "Anna", "Kov√°cs", "+36 20 123 4567" },
-                    { new Guid("f47ac10b-58cc-4372-a567-0e02b2c3d479"), "szabo.peter@example.com", "P√©ter", "Szab√≥", null }
+                    { new Guid("c56a4180-65aa-42ec-a945-5fd21dec0538"), "kovacs.anna@example.com", "Anna", "Kov·cs", "+36 20 123 4567" },
+                    { new Guid("f47ac10b-58cc-4372-a567-0e02b2c3d479"), "szabo.peter@example.com", "PÈter", "SzabÛ", null }
                 });
 
             migrationBuilder.InsertData(
@@ -165,9 +165,9 @@ namespace EstateFlow.Server.Migrations
                 values: new object[,]
                 {
                     { 1, "MVM Next", null, 1 },
-                    { 2, "F≈êG√ÅZ", "a g√°z√≥r√°kat √©vente egyszer olvass√°k le", 2 },
-                    { 3, "F≈ëv√°rosi V√≠zm≈±vek", null, 3 },
-                    { 4, "Debreceni V√≠zm≈±", null, 3 }
+                    { 2, "F’G¡Z", "a g·zÛr·kat Èvente egyszer olvass·k le", 2 },
+                    { 3, "Fıv·rosi VÌzm˚vek", null, 3 },
+                    { 4, "Debreceni VÌzm˚", null, 3 }
                 });
 
             migrationBuilder.InsertData(
@@ -184,11 +184,11 @@ namespace EstateFlow.Server.Migrations
                 columns: new[] { "Id", "Location", "Name", "Note", "PropertyId", "ProviderId", "ReadingPeriod", "SerialNumber", "UtilityTypeId" },
                 values: new object[,]
                 {
-                    { new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3301"), "el≈ëszobai szekr√©nyben", "Villany√≥ra", null, new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), 1, "minden h√≥nap elej√©n", "EL-2019-448723", 1 },
-                    { new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3302"), "konyh√°ban a bej√°rati ajt√≥ mellett", "G√°z√≥ra", "2027-ben hiteles√≠t√©s esed√©kes", new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), 2, null, "GA-2017-902211", 2 },
-                    { new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3303"), "f√ºrd≈ëszob√°ban a k√°d alatt", "V√≠z√≥ra", null, new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), 3, "minden p√°ros h√≥napban van leolvas√°s", "VZ-2021-115847", 3 },
-                    { new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3304"), "folyos√≥n a bej√°rati ajt√≥ mellett", "Villany√≥ra", null, new Guid("7c9e6679-7425-40de-944b-e07fc1f90ae7"), 1, "minden h√≥nap elej√©n", "EL-2020-771139", 1 },
-                    { new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3305"), "konyh√°ban a mosogat√≥ alatt", "V√≠z√≥ra", null, new Guid("9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"), 4, null, "VZ-2018-660254", 3 }
+                    { new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3301"), "elıszobai szekrÈnyben", "VillanyÛra", null, new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), 1, "minden hÛnap elejÈn", "EL-2019-448723", 1 },
+                    { new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3302"), "konyh·ban a bej·rati ajtÛ mellett", "G·zÛra", "2027-ben hitelesÌtÈs esedÈkes", new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), 2, null, "GA-2017-902211", 2 },
+                    { new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3303"), "f¸rdıszob·ban a k·d alatt", "VÌzÛra", null, new Guid("0f8fad5b-d9cb-469f-a165-70867728950e"), 3, "minden p·ros hÛnapban van leolvas·s", "VZ-2021-115847", 3 },
+                    { new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3304"), "folyosÛn a bej·rati ajtÛ mellett", "VillanyÛra", null, new Guid("7c9e6679-7425-40de-944b-e07fc1f90ae7"), 1, "minden hÛnap elejÈn", "EL-2020-771139", 1 },
+                    { new Guid("3f2504e0-4f89-41d3-9a0c-0305e82c3305"), "konyh·ban a mosogatÛ alatt", "VÌzÛra", null, new Guid("9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"), 4, null, "VZ-2018-660254", 3 }
                 });
 
             migrationBuilder.InsertData(
@@ -328,3 +328,5 @@ namespace EstateFlow.Server.Migrations
         }
     }
 }
+
+
