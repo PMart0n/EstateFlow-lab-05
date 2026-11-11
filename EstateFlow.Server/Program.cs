@@ -1,6 +1,6 @@
-﻿using EstateFlow.Application.Common.Interfaces;
+using EstateFlow.Application.Common.Interfaces;
 using EstateFlow.Infrastructure.Data;
-using EstateFlow.Server.Services;
+using EstateFlow.Application.Services;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;

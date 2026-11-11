@@ -1,12 +1,12 @@
-﻿using EstateFlow.Application.Common.Interfaces;
+using EstateFlow.Application.Common.Interfaces;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
-namespace EstateFlow.Server.Contracts.Expenses
+namespace EstateFlow.Application.Contracts.Expenses
 {
-    public class UpdateExpenseRequestValidator : AbstractValidator<UpdateExpenseRequest>
+    public class CreateExpenseRequestValidator : AbstractValidator<CreateExpenseRequest>
     {
-        public UpdateExpenseRequestValidator(IApplicationDbContext context)
+        public CreateExpenseRequestValidator(IApplicationDbContext context)
         {
             RuleFor(x => x.Amount)
                 .GreaterThan(0);
