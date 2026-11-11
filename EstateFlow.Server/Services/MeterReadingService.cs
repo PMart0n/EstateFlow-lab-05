@@ -1,5 +1,5 @@
-using EstateFlow.Server.Contracts.Meters;
-using EstateFlow.Infrastructure.Data;
+﻿using EstateFlow.Server.Contracts.Meters;
+using EstateFlow.Application.Common.Interfaces;
 using EstateFlow.Domain;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,9 +7,9 @@ namespace EstateFlow.Server.Services
 {
     public class MeterReadingService : IMeterReadingService
     {
-        private readonly EstateFlowDbContext _context;
+        private readonly IApplicationDbContext _context;
 
-        public MeterReadingService(EstateFlowDbContext context)
+        public MeterReadingService(IApplicationDbContext context)
         {
             _context = context;
         }
@@ -74,6 +74,9 @@ namespace EstateFlow.Server.Services
         }
     }
 }
+
+
+
 
 
 

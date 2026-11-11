@@ -1,3 +1,4 @@
+﻿using EstateFlow.Application.Common.Interfaces;
 using EstateFlow.Infrastructure.Data;
 using EstateFlow.Server.Services;
 using FluentValidation;
@@ -16,6 +17,7 @@ builder.Services.AddOpenApi(options =>
 });
 
 
+builder.Services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<EstateFlowDbContext>());
 builder.Services.AddDbContext<EstateFlowDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("EstateFlowDbConnection")));
 
@@ -47,4 +49,6 @@ app.MapControllers();
 app.MapFallbackToFile("/index.html");
 
 app.Run();
+
+
 
